@@ -11,15 +11,15 @@ const adminRouter = express.Router();
 //adminRouter.post('/login', logIn)
 
 //view all appts
-adminRouter.get('/',  viewAllAppointments)   //are we using auth here?
+adminRouter.get('/', authenticate, viewAllAppointments)   //are we using auth here?
 
 //view specific appt
-adminRouter.get('/:id',  viewAppointment)   //and here?
+adminRouter.get('/:id', authenticate, viewAppointment)   //and here?
 
 //delete appt
-adminRouter.delete('/:id',  deleteAppointment)
+adminRouter.delete('/:id', authenticate,  deleteAppointment)
 
 //accept appt
-adminRouter.put('/:id',  acceptAppointment)  //update so status goes from pending -> accepted
+adminRouter.put('/:id', authenticate, acceptAppointment)  //update so status goes from pending -> accepted
 
 export default adminRouter;

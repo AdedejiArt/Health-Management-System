@@ -8,9 +8,9 @@ usersRouter.post("/",addUser);
 //Add a user ------Sign In
 usersRouter.post("/signin",SignIn);
 //View a User ------
-usersRouter.get("/:id", ViewUser);
+usersRouter.get("/:id", authenticate, ViewUser);
 //View All Users
-usersRouter.get("/", ViewAllUsers);
+usersRouter.get("/",authenticate, ViewAllUsers);
  
 
 
