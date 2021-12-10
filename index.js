@@ -8,16 +8,13 @@ dotenv.config()
 const port = process.env.PORT;
 
 
-
 app.get("/", (req, res) => {
-    res.res('INdex')
+    res.json('jdjdjd')
 })
-
 
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(router);
-
 
 app.listen(port, () => {
     console.log(`Our HealthHub API is now available on port${port}`)
