@@ -4,12 +4,12 @@ import { authenticate } from "../middlewares/auth.js";
 const appointmentRouter = express.Router();
 
 //view all appts
-appointmentRouter.get('/', authenticate, viewAllAppointments)   //are we using auth here?
+appointmentRouter.get('/',   viewAllAppointments)   //are we using auth here?
 
 //delete appt
-appointmentRouter.delete('/:id', authenticate,   deleteAppointment)
+appointmentRouter.delete('/:id',     deleteAppointment)
 
 //accept appt
-appointmentRouter.put('/:id', authenticate, acceptAppointment)
+appointmentRouter.put('/:id', acceptAppointment)
 
 export default appointmentRouter;

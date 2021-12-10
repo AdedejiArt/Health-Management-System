@@ -3,13 +3,13 @@ import {viewRecord, viewAllRecords, createRecord, deleteRecord} from "../control
 const recordsRouter = express.Router();
 
 //view one record
-recordsRouter.get('/:id', viewRecord)
+recordsRouter.get('/:id',  viewRecord)
 
 //view records
-recordsRouter.get('/', viewAllRecords)
+recordsRouter.get('/',  viewAllRecords)
 
 //crate a record
-recordsRouter.post('/', createRecord)
+recordsRouter.post('/',  createRecord)
 
 //delete records
 recordsRouter.delete('/:id', deleteRecord)

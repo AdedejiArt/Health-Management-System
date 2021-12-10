@@ -5,23 +5,23 @@ import { authenticate } from "../middlewares/auth.js";
 const HopsitalRouter=express.Router();
 
 //Add a hospital           hospital/
-HopsitalRouter.post("/",authenticate, addHospital );
+HopsitalRouter.post("/",  addHospital );
 
 
 //View a hospital         hospital/:id
-HopsitalRouter.get("/:id",authenticate, ViewHospital);
+HopsitalRouter.get("/:id",  ViewHospital);
 
 
 //View all hospitals       hospital/
-HopsitalRouter.get("/", authenticate, ViewAllHospital);
+HopsitalRouter.get("/",   ViewAllHospital);
 
 
 //Update Hospital record  hospital/:id
-HopsitalRouter.put("/", authenticate, UpdateHospital);
+HopsitalRouter.put("/",   UpdateHospital);
 
 
 //Delete a hospital       hospital/:id  
-HopsitalRouter.delete("/:id", authenticate, deleteHospital);
+HopsitalRouter.delete("/:id",   deleteHospital);
 
 
 export default HopsitalRouter;
