@@ -5,13 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "npm start"
   },
   "keywords": [
     "Health-Hub",
     "API"
   ],
-  "author": "Adio Adedeji Roheem & Wanjiru Waang'ondu & Caleb Wanjru",
+  "author": "Adio Adedeji Roheem & Wanjiru Waang'ondu & Caleb Mugisha",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
