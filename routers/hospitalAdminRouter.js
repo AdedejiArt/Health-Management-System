@@ -1,25 +1,27 @@
 import express from "express";
-import { viewAppointment, deleteAppointment, acceptAppointment} from "../Controllers/hospitalAdminController.js";
+import { addAdmin, deleteAdmin, viewAdmin, viewAllAdmin, viewAllAppointments, deleteAppointment, acceptAppointment} from "../Controllers/hospitalAdminController.js";
 import { authenticate } from "../middlewares/auth.js";
-//import { authenticate } from "../middlewares/auth.js";
-//const adminRouter = express.Router();
+const adminRouter = express.Router();
 
-//signup
-//adminRouter.post('/', authenticate, signUp)
+//view an admin
+adminRouter.get('/:id', authenticate, viewAdmin)
 
-//login
-//adminRouter.post('/login', logIn)
+//view all admin
+adminRouter.get('/', authenticate,viewAllAdmin)
+
+//add hospital admin user
+adminRouter.post('/', authenticate,addAdmin)
+
+//delete hospital admin user
+adminRouter.delete('/:id',authenticate, deleteAdmin)
 
 //view all appts
-//adminRouter.get('/',  viewAllAppointments)   //are we using auth here?
-
-//view specific appt
-//adminRouter.get('/:id',   viewAppointment)   //and here?
+adminRouter.get('/:id',authenticate, viewAllAppointments)
 
 //delete appt
-//adminRouter.delete('/:id',    deleteAppointment)
+adminRouter.delete('/:id',authenticate, deleteAppointment)
 
 //accept appt
-//adminRouter.put('/:id',   acceptAppointment)  //update so status goes from pending -> accepted
+adminRouter.put('/:id', authenticate,acceptAppointment)  //update so status goes from pending -> accepted
 
-//export default adminRouter;
+export default adminRouter;

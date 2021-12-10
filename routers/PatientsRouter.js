@@ -3,11 +3,11 @@ import { addPatient,ViewPatient,ViewAllPatients , UpdatePatient ,deletePatient }
 import { authenticate } from "../middlewares/auth.js";
 const PatientRouter=express.Router();
 //Get a Patient
-PatientRouter.get("/",  ViewAllPatients);
-PatientRouter.get("/:id",  ViewPatient);
-PatientRouter.post("/",  addPatient);
-PatientRouter.put("/",  UpdatePatient);
-PatientRouter.delete("/:id",  deletePatient);
+PatientRouter.get("/", authenticate, ViewAllPatients);
+PatientRouter.get("/:id",authenticate,  ViewPatient);
+PatientRouter.post("/", authenticate, addPatient);
+PatientRouter.put("/", authenticate, UpdatePatient);
+PatientRouter.delete("/:id", authenticate, deletePatient);
 
 
 

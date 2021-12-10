@@ -1,33 +1,31 @@
 import Appointment from "../models/appointmentsModel.js";
 
 
-//Capture Appointents
-// export async function addPatient(req,res){
-//     try{
-//         let Appoint=await Appointment.create(req.body);
-//         if(Appoint){
-//             res.status(200).json({
-//                 success:true,
-//                 data:Appoint
-//             })
-//         }else{
-//           res.status(200).json({
-//               success:true,
-//               message:"Appointment could not be created successfully"
-//           })
+export async function createAppt(req, res) {
+    try {
+        let newAppt = await Appointment.create(req.body);
+        if (newAppt) {
+            res.status(200).json({
+                success: true,
+                data: newAppt,
+                message: "Appointment created successfully"
+            })
+        } else {
+            res.status(200).json({
+                success: false,
+                message: "Appointment not created successfully"
+            })
 
-//         }
-//     }catch (err){
-//         console.log(err);
-//     res.status(500).json({
-        
-//         success:false,
-//         message:"Opps.....Something is wrong"
-//     })
-//     }
-// }
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({
 
-
+            success: false,
+            message: "Oops! Something is wrong"
+        })
+    }
+}
 
 //view appointments
 export async function viewAllAppointments (req,res){
