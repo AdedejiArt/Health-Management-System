@@ -111,34 +111,34 @@ export async function viewAppointment (req, res){
 }
 
 //view all appointments
-export async function viewAllAppointments (req,res){
-    try{
-        let allAppts = await Appointment.findAll({where: {Hospital_id: req.params.id}});
-        if (allAppts){
-            res.status(200).json({
-                success:true,
-                message:"Appointment list retrieved successfully",
-                data: allAppts
-            })}else{
-                res.json({
-                    success:true,
-                    message:"Appointment list could not be retrieved"
-                })
-            }
-    }catch(err){
-        if (err){
-            console.log(err)
-            res.json({
+//export async function viewAllAppointments (req,res){
+//    try{
+ //       let allAppts = await Appointment.findAll({where: {Hospital_Id: req.params.id}});
+//         if (allAppts){
+//             res.status(200).json({
+//                 success:true,
+//                 message:"Appointment list retrieved successfully",
+//                 data: allAppts
+//             })}else{
+//                 res.json({
+//                     success:true,
+//                     message:"Appointment list could not be retrieved"
+//                 })
+//             }
+//     }catch(err){
+//         if (err){
+//             console.log(err)
+//             res.json({
         
-                success:false,
-                message:"Oops! Something is wrong"
-            })
+//                 success:false,
+//                 message:"Oops! Something is wrong"
+//             })
 
-        }
+//         }
 
-    }
+//     }
     
-}
+// //}
 
 //delete an appointment (id required)
 export async function deleteAppointment(req, res) {

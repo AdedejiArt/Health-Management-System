@@ -1,8 +1,8 @@
 import express from "express";
-import { viewAllAppointments, viewAppointment, deleteAppointment, acceptAppointment} from "../Controllers/hospitalAdminController.js";
+import { viewAppointment, deleteAppointment, acceptAppointment} from "../Controllers/hospitalAdminController.js";
 import { authenticate } from "../middlewares/auth.js";
 //import { authenticate } from "../middlewares/auth.js";
-const adminRouter = express.Router();
+//const adminRouter = express.Router();
 
 //signup
 //adminRouter.post('/', authenticate, signUp)
@@ -11,15 +11,15 @@ const adminRouter = express.Router();
 //adminRouter.post('/login', logIn)
 
 //view all appts
-adminRouter.get('/',  viewAllAppointments)   //are we using auth here?
+//adminRouter.get('/',  viewAllAppointments)   //are we using auth here?
 
 //view specific appt
-adminRouter.get('/:id',   viewAppointment)   //and here?
+//adminRouter.get('/:id',   viewAppointment)   //and here?
 
 //delete appt
-adminRouter.delete('/:id',    deleteAppointment)
+//adminRouter.delete('/:id',    deleteAppointment)
 
 //accept appt
-adminRouter.put('/:id',   acceptAppointment)  //update so status goes from pending -> accepted
+//adminRouter.put('/:id',   acceptAppointment)  //update so status goes from pending -> accepted
 
-export default adminRouter;
+//export default adminRouter;

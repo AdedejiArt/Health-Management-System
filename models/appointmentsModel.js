@@ -10,7 +10,7 @@ const Appointment = sequelize.define('appointment', {
         primaryKey: true
     },
 
-    Hospital_id: {
+    Hospital_Id: {
         type: Sequelize.INTEGER(255),
         allowNull: false
     },
