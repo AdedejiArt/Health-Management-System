@@ -1,5 +1,5 @@
 import express from "express";
-import {viewRecord, viewAllRecords, createRecord, deleteRecord} from "../controllers/recordsController.js";
+import {viewRecord, viewAllRecords, createRecord, deleteRecord} from "../Controllers/recordsController.js";
 const recordsRouter = express.Router();
 
 //view one record

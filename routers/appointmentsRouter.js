@@ -1,5 +1,5 @@
 import express from "express";
-import {viewAllAppointments, deleteAppointment, acceptAppointment} from "../controllers/appointmentsController.js";  //accept an appointment
+import {viewAllAppointments, deleteAppointment, acceptAppointment} from "../Controllers/appointmentsController.js";  //accept an appointment
 import { authenticate } from "../middlewares/auth.js";
 const appointmentRouter = express.Router();
 
