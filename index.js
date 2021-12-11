@@ -1,7 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
-import router from "./routers/index.js"
+import router from "./routers/index.js";
+import cors from "cors";
 const app=express();
 
 dotenv.config()
