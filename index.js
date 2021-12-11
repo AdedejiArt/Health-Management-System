@@ -15,13 +15,16 @@ app.get("/", (req, res) => {
     res.send("Hello World")
 })
 
-app.use(cors());
+app.use(cors({
+    origin: '*'
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(router);
 
 app.get('/patient/:id', function(req, res, next) {
+
     res.json({ msg: 'This is CORS-enabled for all origins!' })
 })
 app.get('/adminRouter/:id', function(req, res, next) {
