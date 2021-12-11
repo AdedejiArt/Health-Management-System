@@ -33,7 +33,7 @@ app.get('/hospital/:id', function(req, res, next) {
 app.get('/appointment/:id', function(req, res, next) {
     res.json({ msg: 'This is CORS-enabled for all origins!' })
 })
-app.get('/user/:id', function(req, res, next) {
+app.get('/users/', function(req, res, next) {
     res.json({ msg: 'This is CORS-enabled for all origins!' })
 })
 
