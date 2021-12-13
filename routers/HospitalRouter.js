@@ -1,7 +1,6 @@
 import express from "express";
 import { addHospital,ViewAllHospital,ViewHospital,UpdateHospital,deleteHospital } from "../Controllers/HospitalController.js";
 import { authenticate } from "../middlewares/auth.js";
-
 const HopsitalRouter=express.Router();
 
 //Add a hospital           hospital/
