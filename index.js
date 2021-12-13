@@ -8,17 +8,20 @@ import cors from "cors";
 
 
 
-const app=express();
+const app = express();
 
 dotenv.config()
 const port = process.env.PORT;
 
- 
 
-const publicDirectory=path.join(__dirname,'./public')
+
+const publicDirectory = path.join(__dirname, './public/')
 app.use(express.static(publicDirectory))
-
-app.set('view engine','hbs')
+    // app.use("/css", express.static(__dirname + "/css"));
+    // app.use("/fonts", express.static(__dirname + "/fonts"));
+    // app.use("/img", express.static(__dirname + "/img"));
+    // app.use("/plugins", express.static(__dirname + "/plugins"));
+app.set('view engine', 'hbs')
 
 
 
@@ -45,7 +48,7 @@ app.use(router);
 //     res.json({ msg: 'This is CORS-enabled for all origins!' })
 // })
 //app.get('/router/:id', function (req, res, next) {
- //   res.json({ msg: 'This is CORS-enabled for all origins!' })
+//   res.json({ msg: 'This is CORS-enabled for all origins!' })
 //})
 
 
