@@ -121,7 +121,7 @@ export async function SignIn(req, res) {
             }
             let authToken = jwt.sign({ emailaddress: user.emailaddress, User_id: user.User_id }, process.env.AUTH_KEY, { expiresIn: "1hr" });
               if(authToken){
-                  res.render('index')
+                  res.render('patient-dashboard')
               }
             // return res.status(200).json({
             //     status: true,
