@@ -17,19 +17,11 @@ export async function addUser(req, res) {
             }
             let user = await User.create(userObj);
             if (user) {
-
+                console.log(userObj)
                 res.render('patient-dashboard')
-            //     res.status(200).json({
-            //         success: true,
-            //         data: user
-            //     })
-            // } else {
-            //     res.status(200).json({
-            //         success: true,
-            //         message: "User could not be added successfully"
-            //     })
 
-             }
+
+            }
 
         });
 
@@ -125,7 +117,7 @@ export async function SignIn(req, res) {
             let authToken = jwt.sign({ emailaddress: user.emailaddress, User_id: user.User_id }, process.env.AUTH_KEY, { expiresIn: "1hr" });
             if (authToken) {
                 res.render('patient-dashboard')
-                 
+
             }
             // return res.status(200).json({
             //     status: true,
