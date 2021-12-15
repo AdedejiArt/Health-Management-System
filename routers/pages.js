@@ -29,5 +29,26 @@ pagesrouter.get('/doctor-dashboard', (req, res) => {
 pagesrouter.get('/checkout', (req, res) => {
     res.render("checkout")
 })
+pagesrouter.get('/my-patients', (req, res) => {
+    res.render("my-patients")
+})
 
+pagesrouter.get('/schedule-timings', (req, res) => {
+    res.render("schedule-timings")
+})
+
+pagesrouter.get('/available-timings', (req, res) => {
+    res.render("available-timings")
+})
+
+
+// pagesrouter.get('/users/register', (req, res) => {
+//     res.render("patient-dashboard")
+// })
+pagesrouter.get('/hospitalusers/doctor-register', (req, res) => {
+        res.render("doctor-dashboard")
+    })
+    // pagesrouter.get('/doctor-login', (req, res) => {
+    //     res.render("doctor-dashboard")
+    // })
 export default pagesrouter;
