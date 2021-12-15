@@ -21,7 +21,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/AdedejiArt/Health-Hub1">
-    <img src="public/assets/img/logo.png" alt="Logo" width="100" height="80">
+    <img src="public/assets/img/logo.png" alt="Logo" width="150" height="80">
   </a>
 
 <h3 align="center">Health Hub</h3>
