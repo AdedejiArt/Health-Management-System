@@ -32,7 +32,7 @@
     <a href="https://github.com/AdedejiArt/Health-Hub1"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">Earlier Repos</a>
+    <a href="https://github.com/WanjiW/HealthHubAPI">Earlier Repos</a>
     ·
 <!--     <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
     ·
@@ -73,7 +73,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
+<!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description` -->
+
+Health Hub is a web application that aims to solve the issues of records accessiblity and patient-hospital relations to help patients have an easier relationship and interaction with their healthcare providers.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -134,15 +136,15 @@ This project can be used for any type of patient, from people who go to the hosp
 
 <!-- ROADMAP -->
 <!-- ## Roadmap
-
+<!-- 
 - [] Feature 1
 - [] Feature 2
 - [] Feature 3
-    - [] Nested Feature
+    - [] Nested Feature -->
 
 <!-- See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues). -->
 
-<p align="right">(<a href="#top">back to top</a>)</p> -->
+<!-- <p align="right">(<a href="#top">back to top</a>)</p> --> -->
 
 
 
