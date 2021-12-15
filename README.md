@@ -75,7 +75,8 @@
 
 <!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description` -->
 
-Health Hub is a web application that aims to solve the issues of records accessiblity and patient-hospital relations to help patients have an easier relationship and interaction with their healthcare providers.
+Health Hub is a web application that aims to solve the issues of records accessiblity and patient-hospital relations to help patients have an easier relationship and interaction with their healthcare providers. Health Hub Application helps patients upload their personal records and helps hospital staff and patients have better communication in terms of appointment booking. This will allow the staff to be able to receive emails and log the appointments without needing to call each and every client. As for the patients, they will have their documents with them at all times, so they would be easy to access. 
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
