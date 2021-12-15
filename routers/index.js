@@ -5,15 +5,23 @@ import adminRouter from "./hospitalAdminRouter.js";
 import appointmentRouter from "./appointmentsRouter.js";
 import usersRouter from "./usersRouter.js";
 import pagesrouter from "./pages.js";
+
+import HospitalusersRouter from "./hospitaluserRouter.js"
+
 import recordsRouter from "./recordsRouter.js";
 
-const router=express.Router();
+
+const router = express.Router();
 
 
-router.use('/',pagesrouter);
-router.use("/users",usersRouter);
+
+router.use('/', pagesrouter);
+router.use("/users", usersRouter);
+router.use("/hospital", usersRouter);
+router.use("/hospitalusers", HospitalusersRouter);
 router.use("/appointment",appointmentRouter)
 router.use("/records",recordsRouter);
+
 
 // router.use("/hospital", HopsitalRouter);
 // router.use("/patient", PatientRouter);

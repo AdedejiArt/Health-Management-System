@@ -34,6 +34,30 @@ pagesrouter.get("/hospitals",(req,res)=>{
 pagesrouter.get("/Bookingappointm",(req,res)=>{
     res.render("Bookingappointm")
 })
+
+pagesrouter.get('/my-patients', (req, res) => {
+    res.render("my-patients")
+})
+
+pagesrouter.get('/schedule-timings', (req, res) => {
+    res.render("schedule-timings")
+})
+
+pagesrouter.get('/available-timings', (req, res) => {
+    res.render("available-timings")
+})
+
+
+// pagesrouter.get('/users/register', (req, res) => {
+//     res.render("patient-dashboard")
+// })
+pagesrouter.get('/hospitalusers/doctor-register', (req, res) => {
+        res.render("doctor-dashboard")
+    })
+    // pagesrouter.get('/doctor-login', (req, res) => {
+    //     res.render("doctor-dashboard")
+    // })
+
  pagesrouter.get("/records",(req,res)=>{
      res.render("records")
 
@@ -45,4 +69,5 @@ pagesrouter.get("/booking-success"),(req,res)=>{
 pagesrouter.get("/upload-Success"),(req,res)=>{
     res.render("/upload-success")
 }
+
 export default pagesrouter;
