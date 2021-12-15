@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <meta charset="utf-8" />
@@ -13,10 +13,7 @@
 
 <link rel="stylesheet" href="assets/css/style.css" />
 
-<!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.min.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+
 </head>
 
 <body>
@@ -24,45 +21,41 @@
     <header class="header">
       <nav class="navbar navbar-expand-lg header-nav">
         <div class="navbar-header">
-          <a id="mobile_btn" href="javascript:void(0);">
-            <span class="bar-icon">
 
-            </span>
+        </div>
+        <div class="menu-header">
+
+          <a id="menu_close" class="menu-close" href="javascript:void(0);">
+            <i class="fas fa-times"></i>
           </a>
         </div>
-          <div class="menu-header">
 
-            <a id="menu_close" class="menu-close" href="javascript:void(0);">
-              <i class="fas fa-times"></i>
-            </a>
-          </div>
+  </div>
+  <ul class="nav header-navbar-rht">
+    <li class="nav-item contact-item">
+      <div class="header-contact-img">
+        <i class="far fa-hospital"></i>
+      </div>
+      <div class="header-contact-detail">
+        <p class="contact-header">Contact</p>
+        <p class="contact-info-header">+250 784 200 694</p>
+      </div>
+    </li>
 
-        </div>
-        <ul class="nav header-navbar-rht">
-          <li class="nav-item contact-item">
-            <div class="header-contact-img">
-              <i class="far fa-hospital"></i>
-            </div>
-            <div class="header-contact-detail">
-              <p class="contact-header">Contact</p>
-              <p class="contact-info-header">+250 784 200 694</p>
-            </div>
-          </li>
-        
-        </ul>
-      </nav>
-    </header>
+  </ul>
+  </nav>
+  </header>
 
-                     <form action="https://formspree.io/f/mgedeljp" method="POST" id='Book-appointmentform'>
-                       <div class="form-group form-focus">
-                      <input type="text" id="fullname" name="fullname" class="form-control floating" />
-                      <label class="focus-label">fullname</label>
-                    </div>
+  <form action="https://formspree.io/f/mgedeljp" method="POST" id='Book-appointmentform'>
+    <div class="form-group form-focus">
+      <input type="text" id="fullname" name="fullname" class="form-control floating" />
+      <label class="focus-label">fullname</label>
+    </div>
 
-                    <div class="form-group form-focus">
-                      <input type="text" id="emailaddress" name="emailaddress" class="form-control floating" />
-                      <label class="focus-label">Email</label>
-                    </div>
-                     <button id='input-submit' class="btn btn-primary btn-block btn-lg login-btn" type="submit">
-                      submit
-                    </button>
+    <div class="form-group form-focus">
+      <input type="text" id="emailaddress" name="emailaddress" class="form-control floating" />
+      <label class="focus-label">Email</label>
+    </div>
+    <button id='input-submit' class="btn btn-primary btn-block btn-lg login-btn" type="submit">
+      submit
+    </button>

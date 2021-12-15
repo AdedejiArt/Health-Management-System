@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -18,10 +18,7 @@
 
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.min.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+
 </head>
 
 <body>
@@ -29,13 +26,7 @@
     <header class="header">
       <nav class="navbar navbar-expand-lg header-nav">
         <div class="navbar-header">
-          <a id="mobile_btn" href="javascript:void(0);">
-            <span class="bar-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </a>
+
           <a href="/" class="navbar-brand logo">
             <img src="assets/img/logo.png" class="img-fluid" alt="Logo" />
           </a>
@@ -45,9 +36,7 @@
             <a href="/" class="menu-logo">
               <img src="assets/img/logo.png" class="img-fluid" alt="Logo" />
             </a>
-            <a id="menu_close" class="menu-close" href="javascript:void(0);">
-              <i class="fas fa-times"></i>
-            </a>
+
           </div>
         </div>
         <ul class="nav header-navbar-rht">
@@ -162,45 +151,45 @@
                 <div class="card">
                   <div class="card-header">
                     <h4 class="card-title float-left">Medical details</h4>
- 
-                  <div class="card-body">
-                    <div class="card card-table mb-0">
-                      <div class="card-body">
-                        <div class="table-responsive">
-                          <table class="table table-hover table-center mb-0">
-                            <thead>
-                              <tr>
-                                <th>#</th>
-                                <th>Record_title</th>
-                                <th>RecDate</th>
-                                <th >Patient_Id</th>
-                                <th >R_PreExistingCondition</th>
-                                <th> R_PrevSurgeries</th>
-                                <th>R_Insurance</th>
-                                <th> R_ExtraInfo	</th>
-                                <th>Action</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {{#each allRecords}}
-                              <tr>
-                                <th scope="row">{{this.Record_Id}}</th>
-                                <td>{{this.Record_title}}</td>
-                                <td>{{this.RecDate}}</td>
-                                <td >{{this.Patient_Id }}</td>
-                                <td>{{this.R_PreExistingCondition }}</td>
-                                <td>{{this.R_PrevSurgeries }}</td>
-                                <td>{{this.R_Insurance}}</td>
-                                <td>{{this.Action}}</td>
-                                <td>
-                                  <div class="table-action">
-                                    <a href="#edit_medical_form" class="btn btn-sm bg-info-light" data-toggle="modal">
-                                      <i class="fas fa-edit"></i> Edit
-                                    </a>
-                                    <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
-                                      <i class="fas fa-trash-alt"></i> Delete
-                                    </a>
-                                  </div>
-                                </td>
-                              </tr>
-                              {{/each}}
+
+                    <div class="card-body">
+                      <div class="card card-table mb-0">
+                        <div class="card-body">
+                          <div class="table-responsive">
+                            <table class="table table-hover table-center mb-0">
+                              <thead>
+                                <tr>
+                                  <th>#</th>
+                                  <th>Record_title</th>
+                                  <th>RecDate</th>
+                                  <th>Patient_Id</th>
+                                  <th>R_PreExistingCondition</th>
+                                  <th> R_PrevSurgeries</th>
+                                  <th>R_Insurance</th>
+                                  <th> R_ExtraInfo </th>
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {{#each allRecords}}
+                                <tr>
+                                  <th scope="row">{{this.Record_Id}}</th>
+                                  <td>{{this.Record_title}}</td>
+                                  <td>{{this.RecDate}}</td>
+                                  <td>{{this.Patient_Id }}</td>
+                                  <td>{{this.R_PreExistingCondition }}</td>
+                                  <td>{{this.R_PrevSurgeries }}</td>
+                                  <td>{{this.R_Insurance}}</td>
+                                  <td>{{this.Action}}</td>
+                                  <td>
+                                    <div class="table-action">
+                                      <a href="#edit_medical_form" class="btn btn-sm bg-info-light" data-toggle="modal">
+                                        <i class="fas fa-edit"></i> Edit
+                                      </a>
+                                      <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+                                        <i class="fas fa-trash-alt"></i> Delete
+                                      </a>
+                                    </div>
+                                  </td>
+                                </tr>
+                                {{/each}}

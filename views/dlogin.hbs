@@ -34,9 +34,12 @@
                                 </div>
                                 <div class="col-md-12 col-lg-6 login-right">
                                     <div class="login-header">
-                                        <h3>Login <span>Healthhub</span></h3>
+
+                                        <h3>Patient Login </h3>
+                                        <a href="doctor-register">Are you a Hospital?</a>
+
                                     </div>
-                                    <form action="/hospitalusers/signin" method="POST" id='login-form'>
+                                    <form action="/users/signin" method="POST" id='login-form'>
                                         <div class="form-group form-focus">
                                             <input type="text" id="emailaddress" name="emailaddress"
                                                 class="form-control floating" />
@@ -47,14 +50,16 @@
                                                 name="password" />
                                             <label class="focus-label">Password</label>
                                         </div>
-
+                                        <div class="text-right">
+                                            <a class="forgot-link" href="forgot-password">Forgot Password ?</a>
+                                        </div>
                                         <button id='input-submit' class="btn btn-primary btn-block btn-lg login-btn"
                                             type="submit">
                                             Login
                                         </button>
 
                                         <div class="text-center dont-have">
-                                            Don't have an account?
+                                            Don’t have an account?
                                             <a href="register">Register</a>
                                         </div>
                                     </form>

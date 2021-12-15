@@ -18,10 +18,7 @@
 
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.min.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+
 </head>
 
 <body>
@@ -29,13 +26,7 @@
     <header class="header">
       <nav class="navbar navbar-expand-lg header-nav">
         <div class="navbar-header">
-          <a id="mobile_btn" href="javascript:void(0);">
-            <span class="bar-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </a>
+
           <a href="/" class="navbar-brand logo">
             <img src="assets/img/logo.png" class="img-fluid" alt="Logo" />
           </a>
@@ -45,8 +36,8 @@
             <a href="/" class="menu-logo">
               <img src="assets/img/logo.png" class="img-fluid" alt="Logo" />
             </a>
-            <a id="menu_close" class="menu-close" href="javascript:void(0);">
-              <i class="fas fa-times"></i>
+            <a id="menu_close" class="menu-close">
+              <i class=" fas fa-times"></i>
             </a>
           </div>
 
@@ -173,15 +164,235 @@
 
                     <div class="tab-content pt-0">
                       <div id="pat_medicalrecords" class="tab-pane fade show active">
-                         <form action="records">
-                         <div class="col-6">
-                      <a href="/records"  class="btn book-btn">Upload Records</a>
-                    </div>
-                         </form>
+                        <div class="text-right">
+                          <a href="#" class="add-new-btn" data-toggle="modal"
+                            data-target="#add_medical_records_modal">Add Medical Records</a>
+                        </div>
                         <div class="card card-table mb-0">
                           <div class="card-body">
                             <div class="table-responsive">
-                               
+                              <table class="table table-hover table-center mb-0">
+                                <thead>
+                                  <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Attachment</th>
+                                    <th>Orderd By</th>
+                                    <th>Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>Richard Wilson</td>
+                                    <td>
+                                      11 Nov 2019
+                                      <span class="d-block text-info">10.00 AM</span>
+                                    </td>
+                                    <td>Benzaxapine Croplex</td>
+                                    <td>
+                                      <a href="javascript:void(0);" title="Download attachment"
+                                        class="btn btn-primary btn-sm">
+                                        <i class="fa fa-download"></i></a>
+                                    </td>
+                                    <td>Your Self</td>
+                                    <td>
+                                      <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+                                        <i class="far fa-trash-alt"></i>
+                                      </a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>2</td>
+                                    <td>Vena</td>
+                                    <td>
+                                      3 Nov 2019
+                                      <span class="d-block text-info">11.00 AM</span>
+                                    </td>
+                                    <td>Rapalac Neuronium</td>
+                                    <td>
+                                      <a href="javascript:void(0);" title="Download attachment"
+                                        class="btn btn-primary btn-sm">
+                                        <i class="fa fa-download"></i></a>
+                                    </td>
+                                    <td>Your Self</td>
+                                    <td>
+                                      <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+                                        <i class="far fa-trash-alt"></i>
+                                      </a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>3</td>
+                                    <td>Tressie</td>
+                                    <td>
+                                      1 Nov 2019
+                                      <span class="d-block text-info">1.00 PM</span>
+                                    </td>
+                                    <td>Ombinazol Bonibamol</td>
+                                    <td>
+                                      <a href="javascript:void(0);" title="Download attachment"
+                                        class="btn btn-primary btn-sm">
+                                        <i class="fa fa-download"></i></a>
+                                    </td>
+                                    <td>Your Self</td>
+                                    <td>
+                                      <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+                                        <i class="far fa-trash-alt"></i>
+                                      </a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>4</td>
+                                    <td>Richard Wilson</td>
+                                    <td>
+                                      30 Oct 2019
+                                      <span class="d-block text-info">9.00 AM</span>
+                                    </td>
+                                    <td>Dantotate Dantodazole</td>
+                                    <td>
+                                      <a href="javascript:void(0);" title="Download attachment"
+                                        class="btn btn-primary btn-sm">
+                                        <i class="fa fa-download"></i></a>
+                                    </td>
+                                    <td>Your Self</td>
+                                    <td>
+                                      <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+                                        <i class="far fa-trash-alt"></i>
+                                      </a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>5</td>
+                                    <td>Christopher</td>
+                                    <td>
+                                      28 Oct 2019
+                                      <span class="d-block text-info">6.00 PM</span>
+                                    </td>
+                                    <td>Acetrace Amionel</td>
+                                    <td>
+                                      <a href="javascript:void(0);" title="Download attachment"
+                                        class="btn btn-primary btn-sm">
+                                        <i class="fa fa-download"></i></a>
+                                    </td>
+                                    <td>Your Self</td>
+                                    <td>
+                                      <a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+                                        <i class="far fa-trash-alt"></i>
+                                      </a>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="modal fade custom-modal custom-medicalrecord-modal" id="add_medical_records_modal" style="display: none"
+    data-select2-id="add_medical_records_modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add Medical Records</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <form id="medical_records_form" enctype="multipart/form-data">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label>Title Name</label>
+                  <input type="text" name="description" class="form-control" placeholder="Enter Title Name" />
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label>Patient</label>
+                  <select class="select">
+                    <option>Myself</option>
+                    <option>Child_1</option>
+                    <option>Self</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label>Hospital Name</label>
+                  <input type="text" name="hospital" class="form-control" placeholder="Enter name here.." />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label>Upload</label>
+                  <div class="upload-medical-records">
+                    <input class="form-control" type="file" name="user_file" id="user_files_mr" />
+                    <div class="upload-content dropzone">
+                      <div class="text-center">
+                        <div class="upload-icon mb-2">
+                          <img src="assets/img/upload-icon.png" alt="" />
+                        </div>
+                        <h5>Drag &amp; Drop</h5>
+                        <h6>or <span class="text-danger">Browse</span></h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label>Symptoms</label>
+                  <input type="text" data-role="tagsinput" class="input-tags form-control" value="Fever, Fatigue"
+                    name="services" id="services" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label>Date</label>
+                  <div class="form-group">
+                    <input type="date" class="form-control" name="tratment_date" id="tratment_date" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <div class="submit-section text-center">
+                <button type="submit" id="medical_btn" class="btn btn-primary submit-btn">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script src="assets/js/jquery.min.js"></script>
 
@@ -196,6 +407,5 @@
   <script src="assets/js/script.js"></script>
 </body>
 
-<!-- Mirrored from doccure-html.dreamguystech.com/template/medical-records by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Aug 2021 15:29:18 GMT -->
 
 </html>

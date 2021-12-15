@@ -21,17 +21,11 @@
 
 
 <body>
-   <div class="main-wrapper">
+  <div class="main-wrapper">
     <header class="header">
       <nav class="navbar navbar-expand-lg header-nav">
         <div class="navbar-header">
-          <a id="mobile_btn" href="javascript:void(0);">
-            <span class="bar-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </a>
+
           <a href="/" class="navbar-brand logo">
             <img src="assets/img/logo.png" class="img-fluid" alt="Logo" />
           </a>
@@ -41,7 +35,7 @@
             <a href="/" class="menu-logo">
               <img src="assets/img/logo.png" class="img-fluid" alt="Logo" />
             </a>
-            <a id="menu_close" class="menu-close" href="javascript:void(0);">
+            <a id="menu_close" class="menu-close">
               <i class="fas fa-times"></i>
             </a>
           </div>
@@ -81,17 +75,17 @@
         </ul>
       </nav>
     </header>
-                     
 
-<form action="/records/upload" method="POST" id='login-form'>
-<div class="form-group col-md-6">
-      <label for="Record_title">Record Title</label>
-      <input type="text" class="form-control" id="Record_title" placeholder="Record Title" name="Record_title">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="RecDate">Record Date</label>
-      <input type="Date" class="form-control" id="RecDate" placeholder="Record Date" name="RecDate">
-    </div>
+
+    <form action="/records/upload" method="POST" id='login-form'>
+      <div class="form-group col-md-6">
+        <label for="Record_title">Record Title</label>
+        <input type="text" class="form-control" id="Record_title" placeholder="Record Title" name="Record_title">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="RecDate">Record Date</label>
+        <input type="Date" class="form-control" id="RecDate" placeholder="Record Date" name="RecDate">
+      </div>
   </div>
   <div class="form-group">
     <label for="Patients_Id">Patients_Id</label>
@@ -99,29 +93,31 @@
   </div>
   <div class="form-group">
     <label for="R_PreExistingCondition">Pre-Existing Conditions</label>
-    <input type="text" class="form-control" id="R_PreExistingCondition" placeholder="Prvious Existing Condition" name="R_PreExistingCondition">
+    <input type="text" class="form-control" id="R_PreExistingCondition" placeholder="Prvious Existing Condition"
+      name="R_PreExistingCondition">
   </div>
   <div class="form-group">
-      <label for="R_PrevSurgeries">Previous Surgeries</label>
-      <input type="text" class="form-control" id="R_PrevSurgeries" placeholder="Previous Surgeries" name="R_PrevSurgeries">
-    </div>
-    <div class="form-group">
-      <label for="R_Insurance">Insurance</label>
-      <input type="text" class="form-control" id="R_Insurance" placeholder="R_Insurance" name="R_Insurance">
-    </div>
- 
-    <div class="form-group">
-      <label for="R_ExtraInfo	">Comments</label>
-      <input type="text" class="form-control" id="R_ExtraInfo" placeholder="Comments" name="R_ExtraInfo">
-    </div>
+    <label for="R_PrevSurgeries">Previous Surgeries</label>
+    <input type="text" class="form-control" id="R_PrevSurgeries" placeholder="Previous Surgeries"
+      name="R_PrevSurgeries">
+  </div>
+  <div class="form-group">
+    <label for="R_Insurance">Insurance</label>
+    <input type="text" class="form-control" id="R_Insurance" placeholder="R_Insurance" name="R_Insurance">
+  </div>
+
+  <div class="form-group">
+    <label for="R_ExtraInfo	">Comments</label>
+    <input type="text" class="form-control" id="R_ExtraInfo" placeholder="Comments" name="R_ExtraInfo">
+  </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
- 
-    
-    
-  
-    
-  
+  </form>
+
+
+
+
+
+
 
   <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script src="assets/js/jquery.min.js"></script>

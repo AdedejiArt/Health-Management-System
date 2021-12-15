@@ -113,7 +113,7 @@ export async function SignIn(req, res) {
         }
         bcrypt.compare(req.body.password, Hospital_users.password).then(response => {
             if (!response) {
-                res.render('login')
+                res.render('doctor-login')
                     //     return res.status(401).json({
                     //         status: false,
                     //         message: "Authentication failed:Incorrect Password"

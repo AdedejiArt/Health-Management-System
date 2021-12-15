@@ -7,7 +7,7 @@ const HospitalusersRouter = express.Router();
 //Add a user ----Sign Up
 HospitalusersRouter.post("/doctor-register", addHospitaluser);
 //Add a user ------Sign In
-// usersRouter.post("/signin",SignIn);
+HospitalusersRouter.post("/signin", SignIn);
 // //View a User ------
 // usersRouter.get("/:id", authenticate,   ViewUser);
 // //View All Users
