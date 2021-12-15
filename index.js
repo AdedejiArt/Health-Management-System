@@ -7,7 +7,6 @@ import router from "./routers/index.js";
 import cors from "cors";
 
 
-
 const app = express();
 
 dotenv.config()
@@ -21,7 +20,7 @@ app.use(express.static(publicDirectory))
     // app.use("/fonts", express.static(__dirname + "/fonts"));
     // app.use("/img", express.static(__dirname + "/img"));
     // app.use("/plugins", express.static(__dirname + "/plugins"));
-//app.engine('hbs',exphbs.engine({extname:".hbs"}))
+    //app.engine('hbs',exphbs.engine({extname:".hbs"}))
 app.set('view engine', 'hbs')
 
 
