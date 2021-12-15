@@ -17,7 +17,6 @@ export async function addUser(req, res) {
             }
             let user = await User.create(userObj);
             if (user) {
-
                 res.render('patient-dashboard')
             //     res.status(200).json({
             //         success: true,
@@ -30,7 +29,6 @@ export async function addUser(req, res) {
             //     })
 
              }
-
         });
 
     } catch (err) {
