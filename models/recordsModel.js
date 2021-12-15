@@ -10,27 +10,29 @@ const Record = sequelize.define('record', {
         primaryKey: true
     },
 
-    Record_Type: {
-        type: Sequelize.STRING(20),
+    Record_title: {
+        type: Sequelize.STRING(255),
         allowNull: false
     },
+
+   // Record_Type: {
+    //    type: Sequelize.STRING(20),
+    //    allowNull: false
+    //},
 
     RecDate: {
         type: Sequelize.DATE,
         allowNull: false
     },
 
-    Patients_Id: {
+    Patient_Id: {
         type: Sequelize.INTEGER(255),
         allowNull: false
     },
 
-    Record_title: {
-        type: Sequelize.STRING(255),
-        allowNull: false
-    },
+    
 
-    R_PreExistingConditions: {
+    R_PreExistingCondition: {
         type: Sequelize.STRING(255),
         allowNull: false
     },

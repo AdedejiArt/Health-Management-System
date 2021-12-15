@@ -3,6 +3,7 @@ import { sequelize } from "../db/dbConnect.js";
 
 //Create a DB Connection.
 
+
 const Hospital_users = sequelize.define('hospital_users', {
     Hospitalusers_id: {
         autoincrement: true,
@@ -36,6 +37,7 @@ const Hospital_users = sequelize.define('hospital_users', {
         unique: true,
         fields: [
             { name: "Hospitalusers_id" }
+
         ]
     }]
 })

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Healthhub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+  <base href="/">
+
+  <link href="assets/img/favicon.png" rel="icon" />
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+
+</head>
+
+
+<body>
+   <div class="main-wrapper">
+    <header class="header">
+      <nav class="navbar navbar-expand-lg header-nav">
+        <div class="navbar-header">
+          <a id="mobile_btn" href="javascript:void(0);">
+            <span class="bar-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </a>
+          <a href="/" class="navbar-brand logo">
+            <img src="assets/img/logo.png" class="img-fluid" alt="Logo" />
+          </a>
+        </div>
+        <div class="main-menu-wrapper">
+          <div class="menu-header">
+            <a href="/" class="menu-logo">
+              <img src="assets/img/logo.png" class="img-fluid" alt="Logo" />
+            </a>
+            <a id="menu_close" class="menu-close" href="javascript:void(0);">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+        </div>
+        <ul class="nav header-navbar-rht">
+          <li class="nav-item contact-item">
+            <div class="header-contact-img">
+              <i class="far fa-hospital"></i>
+            </div>
+            <div class="header-contact-detail">
+              <p class="contact-header">Contact</p>
+              <p class="contact-info-header">+250 784 200 694</p>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown has-arrow logged-item">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+              <span class="user-img">
+                <img class="rounded-circle" src="assets/img/patients/patient.jpg" width="31" alt="Ryan Taylor" />
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="user-header">
+                <div class="avatar avatar-sm">
+                  <img src="assets/img/patients/patient.jpg" alt="User Image" class="avatar-img rounded-circle" />
+                </div>
+                <div class="user-text">
+                  <h6>Wanjiru Wangondu</h6>
+                  <p class="text-muted mb-0">Patient</p>
+                </div>
+              </div>
+              <a class="dropdown-item" href="patient-dashboard">Dashboard</a>
+              <a class="dropdown-item" href="profile-settings">Profile Settings</a>
+              <a class="dropdown-item" href="login">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+                     
+
+<form action="/records/upload" method="POST" id='login-form'>
+<div class="form-group col-md-6">
+      <label for="Record_title">Record Title</label>
+      <input type="text" class="form-control" id="Record_title" placeholder="Record Title" name="Record_title">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="RecDate">Record Date</label>
+      <input type="Date" class="form-control" id="RecDate" placeholder="Record Date" name="RecDate">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Patients_Id">Patients_Id</label>
+    <input type="text" class="form-control" id="Patients_Id" placeholder="Patients_Id" name="Patient_Id" value="21">
+  </div>
+  <div class="form-group">
+    <label for="R_PreExistingCondition">Pre-Existing Conditions</label>
+    <input type="text" class="form-control" id="R_PreExistingCondition" placeholder="Prvious Existing Condition" name="R_PreExistingCondition">
+  </div>
+  <div class="form-group">
+      <label for="R_PrevSurgeries">Previous Surgeries</label>
+      <input type="text" class="form-control" id="R_PrevSurgeries" placeholder="Previous Surgeries" name="R_PrevSurgeries">
+    </div>
+    <div class="form-group">
+      <label for="R_Insurance">Insurance</label>
+      <input type="text" class="form-control" id="R_Insurance" placeholder="R_Insurance" name="R_Insurance">
+    </div>
+ 
+    <div class="form-group">
+      <label for="R_ExtraInfo	">Comments</label>
+      <input type="text" class="form-control" id="R_ExtraInfo" placeholder="Comments" name="R_ExtraInfo">
+    </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+ 
+    
+    
+  
+    
+  
+
+  <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+
+</html>
