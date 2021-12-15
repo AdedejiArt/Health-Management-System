@@ -21,7 +21,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/AdedejiArt/Health-Hub1">
-    <img src="public/assets/img/logo.png" alt="Logo" width="150" height="80">
+    <img src="public/assets/img/logo.png" alt="Logo" width="190" height="90">
   </a>
 
 <h3 align="center">Health Hub</h3>
@@ -60,7 +60,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+<!--     <li><a href="#roadmap">Roadmap</a></li> -->
     <li><a href="#contributing">Contributing</a></li>
 <!--     <li><a href="#license">License</a></li> -->
     <li><a href="#contact">Contact</a></li>
