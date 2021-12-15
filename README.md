@@ -14,7 +14,10 @@
     <a href="https://github.com/AdedejiArt/Health-Hub1"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/WanjiW/HealthHubAPI">Earlier Repos</a>
+    <a href="https://github.com/WanjiW/HealthHubAPI">Earlier Repo A: Final, corrected, working backend code</a>
+    <br />
+    <a href="https://github.com/AdedejiArt/HealthHub">Earlier Repo B: Collaborative backend code</a>
+    
     ·
 <!--     <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
     ·
