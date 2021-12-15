@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <title>Healthhub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-
   <base href="/">
+
   <link href="assets/img/favicon.png" rel="icon" />
 
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -16,10 +16,7 @@
 
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.min.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+
 </head>
 
 <body class="account-page">
@@ -33,45 +30,29 @@
             <div class="account-content">
               <div class="row align-items-center justify-content-center">
                 <div class="col-md-7 col-lg-6 login-left">
-                  <img src="assets/img/login-banner.png" class="img-fluid" alt="Healthhub Login" />
+                  <img src="assets/img/login-banner.png" class="img-fluid" alt="Healthhub Register" />
                 </div>
                 <div class="col-md-12 col-lg-6 login-right">
-                  <div class="login-header">
+ 
+                      
 
-                    <h3>Patient Login </h3>
-                    <a href="doctor-register">Are you a Hospital?</a>
-
-                  </div>
-                  <form action="/users/signin" method="POST" id='login-form'>
-                    <div class="form-group form-focus">
-                      <input type="text" id="emailaddress" name="emailaddress" class="form-control floating" />
-                      <label class="focus-label">Email</label>
+                     <form action="/appointment/appt" method="POST" id='Book-appointmentform'>
+                     <div class="form-group form-focus">
+                      <input type="text" id="Hospital_Id" name="Hospital_Id" class="form-control floating" />
+                      <label class="focus-label">Hospital_Id</label>
                     </div>
                     <div class="form-group form-focus">
-                      <input type="password" class="form-control floating" id="password" name="password" />
-                      <label class="focus-label">Password</label>
+                      <input type="date" id="Appointment_Date" name="Appointment_Date" class="form-control floating">
+                      <label for="focus-label"></label>
                     </div>
-                    <div class="text-right">
-                      <a class="forgot-link" href="forgot-password">Forgot Password ?</a>
+                    <div class="form-group form-focus">
+                      <input type="text" class="form-control floating" id="Patient_ID" name="Patient_ID" />
+                      <label class="focus-label">Patient_ID</label>
                     </div>
+                    
                     <button id='input-submit' class="btn btn-primary btn-block btn-lg login-btn" type="submit">
-                      Login
+                      Submit
                     </button>
-
-                    <div class="text-center dont-have">
-                      Don’t have an account?
-                      <a href="register">Register</a>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
   </div>
 
   <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
@@ -81,7 +62,6 @@
   <script src="assets/js/bootstrap.min.js"></script>
 
   <script src="assets/js/script.js"></script>
-  <script src="testing.js"></script>
 </body>
 
 

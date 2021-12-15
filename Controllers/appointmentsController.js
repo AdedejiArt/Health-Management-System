@@ -5,16 +5,17 @@ export async function createAppt(req, res) {
     try {
         let newAppt = await Appointment.create(req.body);
         if (newAppt) {
-            res.status(200).json({
-                success: true,
-                data: newAppt,
-                message: "Appointment created successfully"
-            })
-        } else {
-            res.status(200).json({
-                success: false,
-                message: "Appointment not created successfully"
-            })
+            res.render('Email-entering')
+            //res.status(200).json({
+            //    success: true,
+            //    data: newAppt,
+            //    message: "Appointment created successfully"
+           // })
+       // } else {
+          //  res.status(200).json({
+          //      success: false,
+          //      message: "Appointment not created successfully"
+          //  })
 
         }
     } catch (err) {

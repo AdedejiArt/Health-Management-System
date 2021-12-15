@@ -3,7 +3,7 @@ import {createAppt,viewAllAppointments, deleteAppointment, acceptAppointment} fr
 import { authenticate } from "../middlewares/auth.js";
 const appointmentRouter = express.Router();
 
-appointmentRouter.post('/',authenticate,createAppt)
+appointmentRouter.post('/appt',createAppt)
 
 //view all appts
 appointmentRouter.get('/', authenticate,  viewAllAppointments)   //are we using auth here?

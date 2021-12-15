@@ -1,27 +1,26 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import dotenv from "dotenv"
-import User from "../models/usersmodel.js";
+import dotenv from "dotenv" ;
+import Hospital_users from "../models/HospitalusersModel";
 
 
 
 dotenv.config();
-//Add a User
+//Add a Hospital_users
 export async function addUser(req, res) {
     try {
         bcrypt.hash(req.body.password, 10).then(async(hash) => {
-            let userObj = {
-                fullname: req.body.fullname,
+            let Hospital_usersObj = {
+                fullname: req.body.Hospital_Name,
                 emailaddress: req.body.emailaddress,
                 password: hash
             }
-            let user = await User.create(userObj);
-            if (user) {
-
+            let hospital = await Hospital_users.create(userObj);
+            if (hospital) {
                 res.render('patient-dashboard')
             //     res.status(200).json({
             //         success: true,
-            //         data: user
+            //         data: Hospital_users
             //     })
             // } else {
             //     res.status(200).json({
@@ -30,7 +29,6 @@ export async function addUser(req, res) {
             //     })
 
              }
-
         });
 
     } catch (err) {
@@ -45,20 +43,20 @@ export async function addUser(req, res) {
 }
 
 
-//View A User
+//View A Hospital_users
 export async function ViewUser(req, res) {
     try {
-        let users = await User.findAll({ where: { User_Id: req.params.id } });
-        if (users) {
+        let Hospital_users = await Hospital_users.findAll({ where: { Hospitalusers_id: req.params.id } });
+        if (Hospital_users) {
             res.status(200).json({
                 success: true,
                 message: 'User Records retrieved Sucessfully',
-                data: users
+                data: Hospital_users
             })
         } else {
             res.json({
                 success: true,
-                message: 'No User records found'
+                message: 'No Hospital_users records found'
             })
         }
     } catch (err) {
@@ -73,10 +71,10 @@ export async function ViewUser(req, res) {
 
 }
 
-//View All Users
+//View All Hospital_userss
 export async function ViewAllUsers(req, res) {
     try {
-        let allusers = await User.findAll();
+        let allusers = await Hospital_users.findAll();
         if (allusers) {
             res.status(200).json({
                 success: true,
@@ -86,7 +84,7 @@ export async function ViewAllUsers(req, res) {
         } else {
             res.json({
                 success: true,
-                message: 'No user records found'
+                message: 'No Hospital_users records found'
             })
         }
     } catch (err) {
@@ -102,18 +100,18 @@ export async function ViewAllUsers(req, res) {
 
 //SignIn
 export async function SignIn(req, res) {
-    //Get a user With email Address
+    //Get a Hospital_users With email Address
     //Ensure that their password is correct
     //Create a JWT for them.(For Authenticating Other API requests)
     try {
-        let user = await User.findOne({ where: { emailaddress: req.body.emailaddress } })
-        if (!user) {
+        let Hospital_users = await Hospital_users.findOne({ where: { emailaddress: req.body.emailaddress } })
+        if (!Hospital_users) {
             return res.status(401).json({
                 status: false,
                 message: "Authentication failed:User with email address not found"
             })
         }
-        bcrypt.compare(req.body.password, user.password).then(response => {
+        bcrypt.compare(req.body.password, Hospital_users.password).then(response => {
             if (!response) {
                 res.render('login')
                     //     return res.status(401).json({
@@ -122,7 +120,7 @@ export async function SignIn(req, res) {
                     //     })
 
             }
-            let authToken = jwt.sign({ emailaddress: user.emailaddress, User_id: user.User_id }, process.env.AUTH_KEY, { expiresIn: "1hr" });
+            let authToken = jwt.sign({ emailaddress: Hospital_users.emailaddress, Hospital_users_id: Hospital_users.User_id }, process.env.AUTH_KEY, { expiresIn: "1hr" });
             if (authToken) {
                 res.render('patient-dashboard')
                  
@@ -130,7 +128,7 @@ export async function SignIn(req, res) {
             // return res.status(200).json({
             //     status: true,
             //     message: "User authentication successful",
-            //     user: { fullname: user.fullname, emailaddress: user.emailaddress, User_id: user.User_id },
+            //     Hospital_users: { fullname: Hospital_users.fullname, emailaddress: Hospital_users.emailaddress, Hospital_users_id: Hospital_users.User_id },
             //     token: authToken,
             //     expiresIn: 3600
             // })

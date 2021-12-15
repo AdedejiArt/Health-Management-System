@@ -1,5 +1,5 @@
 import express from "express";
-import {viewRecord, viewAllRecords, createRecord, deleteRecord} from "../controllers/recordsController.js";
+import {viewRecord, createRecord, deleteRecord} from "../controllers/recordsController.js";
 import { authenticate } from "../middlewares/auth.js";
 const recordsRouter = express.Router();
 
@@ -7,10 +7,10 @@ const recordsRouter = express.Router();
 recordsRouter.get('/:id',authenticate,  viewRecord)
 
 //view records
-recordsRouter.get('/', authenticate, viewAllRecords)
+//recordsRouter.get('/', authenticate, allRecords)
 
 //crate a record
-recordsRouter.post('/', authenticate, createRecord)
+recordsRouter.post('/upload', createRecord)
 
 //delete records
 recordsRouter.delete('/:id',authenticate, deleteRecord)

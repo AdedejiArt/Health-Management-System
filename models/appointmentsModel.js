@@ -20,10 +20,10 @@ const Appointment = sequelize.define('appointment', {
         allowNull: false
     },
 
-    Appointment_Status: {
-        type: Sequelize.STRING(20),
-        allowNull: false
-    },
+ //   Appointment_Status: {
+  //      type: Sequelize.STRING(20),
+   //     allowNull: false
+ //   },
 
     Patient_ID: {
         type: Sequelize.INTEGER(255),
