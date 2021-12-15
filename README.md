@@ -117,6 +117,7 @@ This is an example of how to list things you need to use the software and how to
    ```
 3. Check the package.json for any additional packages you may need to install
    ```js
+   Health-Hub1/package.json
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
