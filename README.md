@@ -113,7 +113,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This project can be used for any type of patient, from people who go to the hospital frequently to those who don't. It is a convinient way to book appointments, as there is information on the different hospitals available, with their location and departments listed, to ensure patients are able to make an informed decision. Additionally, on the records side, we made it a form, so that each user fills it resulting in the database storing essential information that hospital's need to have when considering whether to accept or decline the appointment - like surgery history and current medication usage.
+This project can be used for any type of patient, from people who go to the hospital frequently to those who don't. It is a convinient way to book appointments, as there is information on the different hospitals available, with their location and departments listed, to ensure patients are able to make an informed decision.These appointments are sent to the hospital's email . Additionally, on the records side, we made it a form, so that each user fills it resulting in the database storing essential information that hospital's need to have when considering whether to accept or decline the appointment - like surgery history and current medication usage.
 
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
