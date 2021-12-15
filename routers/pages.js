@@ -34,9 +34,15 @@ pagesrouter.get("/hospitals",(req,res)=>{
 pagesrouter.get("/Bookingappointm",(req,res)=>{
     res.render("Bookingappointm")
 })
-// pagesrouter.get("/",(req,res)=>{
-//     res.render("doctor-profile")
+ pagesrouter.get("/records",(req,res)=>{
+     res.render("records")
 
-// })
+ })
+pagesrouter.get("/booking-success"),(req,res)=>{
+    res.render("/booking-success")
+}
 
+pagesrouter.get("/upload-Success"),(req,res)=>{
+    res.render("/upload-success")
+}
 export default pagesrouter;

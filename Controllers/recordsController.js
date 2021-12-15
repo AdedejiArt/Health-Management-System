@@ -30,24 +30,26 @@ export async function viewRecord(req, res) {
 
 }
 
-
+ 
 
 //view all records
 export async function viewAllRecords(req, res) {
     try {
         let allRecords = await Record.findAll();
         if (allRecords) {
-            res.status(200).json({
-                success: true,
-                message: "Record list retrieved successfully",
-                data: allRecords
-            })
-        } else {
-            res.json({
-                success: true,
-                message: "Record list could not be retrieved"
-            })
-        }
+            
+            res.render('medical-details',{allRecords});
+        //     res.status(200).json({
+        //         success: true,
+        //         message: "Record list retrieved successfully",
+        //         data: allRecords
+        //     })
+        // } else {
+        //     res.json({
+        //         success: true,
+        //         message: "Record list could not be retrieved"
+        //     })
+         }
     } catch (err) {
         if (err) {
             res.json({
@@ -66,10 +68,11 @@ export async function createRecord(req, res) {
     try {
         let record = await Record.create(req.body);
         if (record) {
-            res.status(200).json({
-                success: true,
-                data: record
-            })
+            res.render('upload-Success')
+ //           res.status(200).json({
+ //               success: true,
+ //               data: record
+//            })
         } else {
             res.status(200).json({
                 success: true,
