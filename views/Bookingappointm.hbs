@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Healthhub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+  <base href="/">
+
+  <link href="assets/img/favicon.png" rel="icon" />
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+
+</head>
+
+<body class="account-page">
+  <div class="main-wrapper">
+
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="account-content">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-md-7 col-lg-6 login-left">
+                  <img src="assets/img/login-banner.png" class="img-fluid" alt="Healthhub Register" />
+                </div>
+                <div class="col-md-12 col-lg-6 login-right">
+ 
+                      
+
+                     <form action="/appointment/appt" method="POST" id='Book-appointmentform'>
+                     <div class="form-group form-focus">
+                      <input type="text" id="Hospital_Id" name="Hospital_Id" class="form-control floating" />
+                      <label class="focus-label">Hospital_Id</label>
+                    </div>
+                    <div class="form-group form-focus">
+                      <input type="date" id="Appointment_Date" name="Appointment_Date" class="form-control floating">
+                      <label for="focus-label"></label>
+                    </div>
+                    <div class="form-group form-focus">
+                      <input type="text" class="form-control floating" id="Patient_ID" name="Patient_ID" />
+                      <label class="focus-label">Patient_ID</label>
+                    </div>
+                    
+                    <button id='input-submit' class="btn btn-primary btn-block btn-lg login-btn" type="submit">
+                      Submit
+                    </button>
+  </div>
+
+  <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+
+</html>

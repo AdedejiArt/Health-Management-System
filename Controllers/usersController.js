@@ -4,11 +4,12 @@ import dotenv from "dotenv"
 import User from "../models/usersmodel.js";
 
 
+
 dotenv.config();
 //Add a User
 export async function addUser(req, res) {
     try {
-        bcrypt.hash(req.body.password, 10).then(async (hash) => {
+        bcrypt.hash(req.body.password, 10).then(async(hash) => {
             let userObj = {
                 fullname: req.body.fullname,
                 emailaddress: req.body.emailaddress,
@@ -16,22 +17,22 @@ export async function addUser(req, res) {
             }
             let user = await User.create(userObj);
             if (user) {
-                res.send("Form Submitted")
-                res.status(200).json({
-                    success: true,
-                    data: user
-                })
-            } else {
-                res.status(200).json({
-                    success: true,
-                    message: "User could not be added successfully"
-                })
+                res.render('patient-dashboard')
+            //     res.status(200).json({
+            //         success: true,
+            //         data: user
+            //     })
+            // } else {
+            //     res.status(200).json({
+            //         success: true,
+            //         message: "User could not be added successfully"
+            //     })
 
-            }
+             }
         });
 
     } catch (err) {
-         
+
         console.log(err);
         res.status(500).json({
 
@@ -103,26 +104,27 @@ export async function SignIn(req, res) {
     //Ensure that their password is correct
     //Create a JWT for them.(For Authenticating Other API requests)
     try {
-        let user = await User.findOne({where:{ emailaddress: req.body.emailaddress} })
-            if (!user) {
-                return res.status(401).json({
-                    status: false,
-                    message: "Authentication failed:User with email address not found"
-                })
-            }
-             bcrypt.compare(req.body.password, user.password).then(response => {
-             if (!response) {
-                 res.render('login')
-            //     return res.status(401).json({
-            //         status: false,
-            //         message: "Authentication failed:Incorrect Password"
-            //     })
+        let user = await User.findOne({ where: { emailaddress: req.body.emailaddress } })
+        if (!user) {
+            return res.status(401).json({
+                status: false,
+                message: "Authentication failed:User with email address not found"
+            })
+        }
+        bcrypt.compare(req.body.password, user.password).then(response => {
+            if (!response) {
+                res.render('login')
+                    //     return res.status(401).json({
+                    //         status: false,
+                    //         message: "Authentication failed:Incorrect Password"
+                    //     })
 
             }
             let authToken = jwt.sign({ emailaddress: user.emailaddress, User_id: user.User_id }, process.env.AUTH_KEY, { expiresIn: "1hr" });
-              if(authToken){
-                  res.render('patient-dashboard')
-              }
+            if (authToken) {
+                res.render('patient-dashboard')
+                 
+            }
             // return res.status(200).json({
             //     status: true,
             //     message: "User authentication successful",
@@ -130,11 +132,10 @@ export async function SignIn(req, res) {
             //     token: authToken,
             //     expiresIn: 3600
             // })
-            
+
         })
 
-    }
-    catch (err) {
+    } catch (err) {
         console.log(err)
         res.status(500).json({
 
@@ -144,4 +145,3 @@ export async function SignIn(req, res) {
     }
 
 }
-
