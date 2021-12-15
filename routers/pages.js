@@ -21,6 +21,23 @@ pagesrouter.get("/doctor-register", (req, res) => {
     res.render("doctor-register")
 
 })
+pagesrouter.get("/patient-dashboard", (req, res) => {
+    res.render("patient-dashboard")
+
+})
+pagesrouter.get("/doctor-dashboard", (req, res) => {
+    res.render("doctor-dashboard")
+
+})
+
+pagesrouter.get("/hospital-dashboard", (req, res) => {
+    res.render("doctor-dashboard")
+
+})
+pagesrouter.get("/doctor-login", (req, res) => {
+    res.render("doctor-login")
+
+})
 pagesrouter.get("/medical-records", (req, res) => {
     res.render("medical-records")
 
@@ -66,25 +83,16 @@ pagesrouter.get("/records", (req, res) => {
     res.render("records")
 
 })
-pagesrouter.get("/booking-success"), (req, res) => {
+
+pagesrouter.get("/booking-success", (req, res) => {
     res.render("booking-success")
-}
+})
 
-pagesrouter.get("/doctor-login"), (req, res) => {
-    try {
-        res.render("doctor-login")
 
-    } catch (error) {
-        console.log(error)
-    }
-
-}
-pagesrouter.get("/upload-Success"), (req, res) => {
+pagesrouter.get("/upload-Success", (req, res) => {
     res.render("upload-success")
-}
+});
 
-pagesrouter.get("/dlogin"), (req, res) => {
-    res.render("dlogin")
-}
+
 
 export default pagesrouter;
