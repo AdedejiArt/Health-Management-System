@@ -93,6 +93,18 @@ pagesrouter.get("/upload-Success", (req, res) => {
     res.render("upload-success")
 });
 
+// Error pages
+pagesrouter.get("/login-error", (req, res) => {
+    res.render("login-error")
+});
 
+pagesrouter.get("/404", (req, res) => {
+    res.render("404-error")
+});
+
+// 404 catch-all route (should be last)
+pagesrouter.get("*", (req, res) => {
+    res.status(404).render("404-error")
+});
 
 export default pagesrouter;

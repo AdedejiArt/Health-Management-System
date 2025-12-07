@@ -5,9 +5,9 @@ import { sequelize } from "../db/dbConnect.js";
 
 const Patient=sequelize.define('patients',{
 Patients_id:{
-    autoincrement:true,
+    autoIncrement:true,
     type:Sequelize.INTEGER,
-    allowNull:true,
+    allowNull:false,
     primaryKey:true
 
 },
@@ -36,14 +36,7 @@ Patients_FirstName:{
 },{
     sequelize,
     tableName:'patients',
-    timestamps:false,
-    indexes:[{
-        name:"PRIMARY",
-        unique:true,
-        fields:[
-            {name:"Patients_id"}
-        ]
-    }]
+    timestamps:false
 })
 
 export default Patient;

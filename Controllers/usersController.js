@@ -26,13 +26,8 @@ export async function addUser(req, res) {
         });
 
     } catch (err) {
-
         console.log(err);
-        res.status(500).json({
-
-            success: false,
-            message: "Opps.....Something is wrong"
-        })
+        res.status(500).render('404-error')
     }
 }
 
@@ -100,19 +95,11 @@ export async function SignIn(req, res) {
     try {
         let user = await User.findOne({ where: { emailaddress: req.body.emailaddress } })
         if (!user) {
-            return res.status(401).json({
-                status: false,
-                message: "Authentication failed:User with email address not found"
-            })
+            return res.render('login-error')
         }
         bcrypt.compare(req.body.password, user.password).then(response => {
             if (!response) {
-                res.render('login')
-                    //     return res.status(401).json({
-                    //         status: false,
-                    //         message: "Authentication failed:Incorrect Password"
-                    //     })
-
+                return res.render('login-error')
             }
             let authToken = jwt.sign({ emailaddress: user.emailaddress, User_id: user.User_id }, process.env.AUTH_KEY, { expiresIn: "1hr" });
             if (authToken) {
@@ -131,11 +118,7 @@ export async function SignIn(req, res) {
 
     } catch (err) {
         console.log(err)
-        res.status(500).json({
-
-            success: false,
-            message: "Opps!Something is wrong"
-        })
+        res.status(500).render('404-error')
     }
 
 }

@@ -6,9 +6,9 @@ import { sequelize } from "../db/dbConnect.js";
 
 const Hospital_users = sequelize.define('hospital_users', {
     Hospitalusers_id: {
-        autoincrement: true,
+        autoIncrement: true,
         type: Sequelize.INTEGER,
-        allowNull: true,
+        allowNull: false,
         primaryKey: true
 
     },
@@ -31,15 +31,7 @@ const Hospital_users = sequelize.define('hospital_users', {
 }, {
     sequelize,
     tableName: 'hospital_users',
-    timestamps: false,
-    indexes: [{
-        name: "PRIMARY",
-        unique: true,
-        fields: [
-            { name: "Hospitalusers_id" }
-
-        ]
-    }]
+    timestamps: false
 })
 
 export default Hospital_users;

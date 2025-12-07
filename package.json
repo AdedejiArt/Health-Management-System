@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "nodemon": "nodemon index.js"
+    "nodemon": "nodemon index.js",
+    "sync-db": "node syncDatabase.js"
   },
   "keywords": [
     "Health-Hub",

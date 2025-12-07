@@ -5,7 +5,7 @@ const Admin = sequelize.define('admin', {
 
     AdminID: {
         autoIncrement: true,
-        type: Sequelize.INTEGER(255),
+        type: Sequelize.INTEGER,
         allowNull: false,
         primaryKey: true
     },
@@ -31,26 +31,14 @@ const Admin = sequelize.define('admin', {
     },
 
     Hospital_id: {
-        type: Sequelize.INTEGER(255),
+        type: Sequelize.INTEGER,
         allowNull: true
     }
 
 }, {
-
     sequelize,
-    tableName: 'hospital_ admin',
-    timestamps: false,
-    indexes: [
-        {
-            name: "PRIMARY",
-            unique: true,
-            using: "BTREE",
-            fields: [
-                { name: "AdminID" },
-            ]
-        },
-    ]
-
+    tableName: 'hospital_admin',
+    timestamps: false
 });
 
 export default Admin;

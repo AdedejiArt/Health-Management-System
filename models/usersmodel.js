@@ -5,9 +5,9 @@ import { sequelize } from "../db/dbConnect.js";
 
 const User=sequelize.define('users',{
 User_id:{
-    autoincrement:true,
+    autoIncrement:true,
     type:Sequelize.INTEGER,
-    allowNull:true,
+    allowNull:false,
     primaryKey:true
 
 },
@@ -28,14 +28,7 @@ fullname:{
 },{
     sequelize,
     tableName:'users',
-    timestamps:false,
-    indexes:[{
-        name:"PRIMARY",
-        unique:true,
-        fields:[
-            {name:"User_id"}
-        ]
-    }]
+    timestamps:false
 })
 
 export default User;

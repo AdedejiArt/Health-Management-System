@@ -5,7 +5,7 @@ const Record = sequelize.define('record', {
 
     Record_Id: {
         autoIncrement: true,
-        type: Sequelize.INTEGER(255),
+        type: Sequelize.INTEGER,
         allowNull: false,
         primaryKey: true
     },
@@ -26,7 +26,7 @@ const Record = sequelize.define('record', {
     },
 
     Patient_Id: {
-        type: Sequelize.INTEGER(255),
+        type: Sequelize.INTEGER,
         allowNull: false
     },
 
@@ -53,21 +53,9 @@ const Record = sequelize.define('record', {
     }
 
 }, {
-
     sequelize,
-    tableName: 'record',
-    timestamps: false,
-    indexes: [
-        {
-            name: "PRIMARY",
-            unique: true,
-            using: "BTREE",
-            fields: [
-                { name: "Record_Id" },
-            ]
-        },
-    ]
-
+    tableName: 'records',
+    timestamps: false
 });
 
 export default Record;
