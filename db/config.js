@@ -8,7 +8,13 @@ const dbConfig={
     USER:process.env.DB_USER,
     PASSWORD:process.env.DB_PASS,
     DB:process.env.DB_NAME,
-    dialect:"mysql",
+    dialect:"postgres",
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false
+        }
+    },
     pool:{
         max:5,
         min: 0,
